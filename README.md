@@ -182,3 +182,4 @@ Every contribution funds more research time spent reading code and filing high-s
 - **Interests:** SDK code-correctness, cross-chain bridges, AI agent security, fintech integrity
 - **Approach:** Read code carefully, verify aggressively, disclose responsibly
 - **Mindset:** Reputation over volume, merged contributions over filed reports
+
