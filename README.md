@@ -151,6 +151,29 @@ Right now, I'm especially focused on:
 
 ---
 
+
+## AI Disclosure
+
+I use AI-assisted tooling (Claude Code, GPT-4/5, OpenAI Codex when available) across my workflow:
+
+- **At scale:** initial code reading, dependency mapping, pattern hunting across large repos
+- **At draft time:** issue bodies, fix recommendations, PoC reproducers, test plans
+- **At verify time:** adversarial review of my own findings before submission, dupe checks
+- **At cleanup time:** scrubbing meta-instruction leaks, severity recalibration, RFC compliance checks
+
+What this does NOT mean:
+
+- I do not file findings I have not read and understood myself
+- Severity calibration, scope decisions, and final wording are mine
+- "Tested locally" in a comment means the actual app or library was run against the actual scenario — synthetic isolation reproducers are called out as such ("verified via standalone reproducer", "code-walked", "structural review")
+- PR commits are human-reviewed before push and signed with my SSH key (`ED25519 SHA256:CWX60WPoOQcianliIELliGtEftFs9vEnkLmywphAUP8`)
+- I will not dispute Informative or wontfix closes — when a maintainer's reading is sound, I concede
+- I will not dig in after a warning — silence is a feature, not a bug
+
+If a maintainer prefers no AI-assisted disclosures on their project, please say so on any of my reports and I will respect it. I would rather lose a finding than misalign with your workflow.
+
+---
+
 ## Reach Out
 
 - **HackerOne:** [hackerone.com/nexory](https://hackerone.com/nexory)
