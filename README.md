@@ -152,25 +152,27 @@ Right now, I'm especially focused on:
 ---
 
 
+
 ## AI Disclosure
 
-I use AI-assisted tooling (Claude Code, GPT-4/5, OpenAI Codex when available) across my workflow:
+I use AI-assisted tooling (Claude Code, GPT-4/5, OpenAI Codex when available) as the primary engine across my workflow:
 
 - **At scale:** initial code reading, dependency mapping, pattern hunting across large repos
 - **At draft time:** issue bodies, fix recommendations, PoC reproducers, test plans
-- **At verify time:** adversarial review of my own findings before submission, dupe checks
-- **At cleanup time:** scrubbing meta-instruction leaks, severity recalibration, RFC compliance checks
+- **At verify time:** adversarial review, dupe checks, primitive verification against actual repo code
+- **At cleanup time:** meta-instruction scrubbing, severity recalibration, RFC compliance checks
+- **At push time:** workflow-orchestrated `gh` CLI filings and signed commits to PR branches
 
-What this does NOT mean:
+What this means in practice:
 
-- I do not file findings I have not read and understood myself
-- Severity calibration, scope decisions, and final wording are mine
-- "Tested locally" in a comment means the actual app or library was run against the actual scenario — synthetic isolation reproducers are called out as such ("verified via standalone reproducer", "code-walked", "structural review")
-- PR commits are human-reviewed before push and signed with my SSH key (`ED25519 SHA256:CWX60WPoOQcianliIELliGtEftFs9vEnkLmywphAUP8`)
-- I will not dispute Informative or wontfix closes — when a maintainer's reading is sound, I concede
-- I will not dig in after a warning — silence is a feature, not a bug
+- Issue bodies, PR commits, severity calibration, and final wording are workflow-authored. My role is approval gates ("file this batch", "drop this", "concede to this maintainer") rather than line-by-line authorship.
+- Multiple verification stages run before any submission: primitive check against the actual repo code, dupe search in target repo, PoC execution with verbatim output capture, adversarial scrub for meta-instruction leaks and severity inflation. Findings that fail any gate are dropped or deferred.
+- "Tested locally" in a comment means the actual app or library was run against the actual scenario. Synthetic reproducers are explicitly framed as such ("verified via standalone reproducer", "code-walked", "structural review").
+- Commits are signed with my SSH key (`ED25519 SHA256:CWX60WPoOQcianliIELliGtEftFs9vEnkLmywphAUP8`). Content is workflow-authored under my approval; signing attests to my responsibility for it being pushed, not to manual line-by-line authorship.
+- I will not dispute Informative or wontfix closes — when a maintainer's reading is sound, I concede.
+- I will not re-engage after a maintainer warning — silence is the right response.
 
-If a maintainer prefers no AI-assisted disclosures on their project, please say so on any of my reports and I will respect it. I would rather lose a finding than misalign with your workflow.
+If a maintainer prefers no AI-assisted disclosures on their project, please say so on any of my reports and I will respect it. I would rather lose a finding than misrepresent how it was produced.
 
 ---
 
