@@ -2,9 +2,9 @@
 
 ## Security Research · SDK Code-Correctness · Open Source Audit
 
-I focus on finding concrete, reproducible bugs in open-source SDKs and developer infrastructure. My work is grounded in deep code reading, adversarial verification, and structured disclosure — not exploit theatre.
+I focus on finding concrete, reproducible bugs in open-source SDKs and developer infrastructure. The work runs through an AI-orchestrated workflow — deep code reading, adversarial verification, and structured disclosure — gated by my approval at decision points. Methodology is detailed in the AI Disclosure section below.
 
-Active contributor to ecosystems across DeFi, AI agents, Web3 bridges, fintech SDKs, and developer tooling. I prefer execution over speculation, structured disclosure over hype, and merged contributions over closed PRs.
+Active in ecosystems across DeFi, AI agents, Web3 bridges, fintech SDKs, and developer tooling. The preference is for execution over speculation, structured disclosure over hype, and durable signal over volume.
 
 ---
 
@@ -20,7 +20,7 @@ Focus areas:
 - Decimal/precision handling in financial systems
 - Responsible disclosure via HackerOne and GitHub Security Advisories
 
-I work in long structured audit sweeps, verify every finding via adversarial 3-lens review, and only file what survives independent confirmation. Reputation over volume.
+The workflow runs long structured audit sweeps with adversarial verification stages — primitive check against repo code, duplicate search, PoC execution with verbatim output capture, and scrub for severity inflation or meta-instruction leaks. Findings that fail any gate are dropped or deferred. Approval gates are mine; drafts and verification are AI-orchestrated.
 
 ---
 
@@ -104,27 +104,27 @@ I audit production-runtime SDKs for concrete code-correctness bugs that affect S
 I file responsibly via the channel that fits the finding class — HackerOne for in-scope programs, GitHub Security Advisory for direct-to-maintainer coordination, public GitHub Issues for pure code-quality bugs.
 
 **Disclosure principles:**
-- Verify every claim via independent code reading + grep + cross-reference
-- Calibrate severity conservatively (CVSS 4.0 with reasoned vector)
+- Verify every claim against the actual repo code before submission (workflow stage 1)
+- Calibrate severity to the actual impact path (CVSS 4.0 with reasoned vector); downgrade MED→LOW when the bug class is default-config hardening or documented by-design framing
 - Submit one finding per report, no padding
 - Include suggested fix and concrete reproduction steps
 
 ---
 
 ### → Multi-Repo Pattern Hunts
-When a bug class appears once, it usually appears across the ecosystem. I systematically hunt the same pattern across related repositories to surface cross-project occurrences and structural causes.
+When a bug class appears once, it usually appears across the ecosystem. The workflow systematically hunts the same pattern across related repositories to surface cross-project occurrences and structural causes.
 
 Recent pattern hunts:
-- Missing `AbortSignal.timeout()` on critical-path fetches (7 repos surveyed)
-- Map/Set leak on consumer unsubscribe (6 repos surveyed)
-- Type signature drift on optional fields (multiple SDKs)
+- Missing `AbortSignal.timeout()` on critical-path fetches (vercel/turborepo, vercel/workflow, vercel/flags)
+- Map/Set leak on consumer unsubscribe (trpc, drizzle-orm × 2, open-webui)
+- Type signature drift on optional fields (Plaid React Native, hono jwt, drizzle PgNumeric)
 
 ---
 
 ### → Adversarial Verification
-Every finding I file passes through a 3-lens adversarial verification: correctness (does the code actually behave as described), reproducibility (could a maintainer trigger this from the description), and refutation (try to disprove the finding). Only findings surviving 2-of-3 lenses are filed.
+Every finding passes through workflow verification stages before submission: primitive verification against actual repo code, duplicate search in the target repo, PoC execution with verbatim output capture, and adversarial scrub for severity inflation or meta-instruction leaks.
 
-This pipeline prioritizes signal quality over volume — I'd rather file 5 reports that all confirm than 50 that maintainers dispute.
+The pipeline prioritizes signal quality over raw output. Findings that fail any gate are dropped or deferred. What a project receives is filtered through this verification, not unreviewed AI output.
 
 ---
 
@@ -192,7 +192,7 @@ If a maintainer prefers no AI-assisted disclosures on their project, please say 
 - **HackerOne:** [hackerone.com/nexory](https://hackerone.com/nexory)
 - **Email:** open to coordinated disclosure on private security advisories
 
-If you maintain an SDK and want a focused audit pass, reach out — I work in structured sprints and only file what I can confirm.
+If you maintain an SDK and want a focused audit pass, reach out — the workflow runs in structured sprints with confirmation gates and a documented opt-out for AI-assisted reports.
 
 ---
 
@@ -214,8 +214,8 @@ Every contribution funds more research time spent reading code and filing high-s
 
 - **Location:** Europe
 - **Background:** Security research, SDK audit, responsible disclosure
-- **Work Style:** Long structured sweeps, adversarial verification, conservative severity calibration
+- **Work Style:** AI-orchestrated workflows with my approval gates at decision points; long structured sweeps; adversarial verification stages
 - **Interests:** SDK code-correctness, cross-chain bridges, AI agent security, fintech integrity
-- **Approach:** Read code carefully, verify aggressively, disclose responsibly
-- **Mindset:** Reputation over volume, merged contributions over filed reports
+- **Approach:** Read code thoroughly via workflow, verify via multi-stage gates, disclose responsibly via the appropriate channel
+- **Mindset:** Signal quality over filing volume; durable maintainer relationships over individual commit credit; honest framing over marketing rhetoric
 
