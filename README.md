@@ -76,16 +76,27 @@ I work in long structured audit sweeps, verify every finding via adversarial 3-l
 ### → SDK Code-Correctness Audits
 I audit production-runtime SDKs for concrete code-correctness bugs that affect SDK consumers and downstream applications. The goal is always a 1-3 line fix and a passing test, not a theoretical hazard.
 
-**Recent merged contributions:**
+**Merged PRs (commits authored by me):**
 - [`initia-labs/initia.js#168`](https://github.com/initia-labs/initia.js/pull/168) — Cosmos denom regex spec alignment
-- [`vercel/turborepo#12976`](https://github.com/vercel/turborepo/pull/12976) — HTTP timeout added to auth path (closed [#12975](https://github.com/vercel/turborepo/issues/12975))
 
-**Active sprints:**
+**Issues I filed that maintainers fixed (commits authored by maintainers):**
+- [`vercel/turborepo#12975`](https://github.com/vercel/turborepo/issues/12975) → fix PR [#12976](https://github.com/vercel/turborepo/pull/12976) by @anthonyshew (auth HTTP timeouts)
+- [`plaid/react-native-plaid-link-sdk#905`](https://github.com/plaid/react-native-plaid-link-sdk/issues/905) + [`#906`](https://github.com/plaid/react-native-plaid-link-sdk/issues/906) → fixed in v12.8.2 by @dtroupe-plaid (LinkAccountSubtypeLoan + SIPP typo)
+- [`open-webui/open-webui#25464`](https://github.com/open-webui/open-webui/issues/25464) + [`#25465`](https://github.com/open-webui/open-webui/issues/25465) → fix PRs [#25479](https://github.com/open-webui/open-webui/pull/25479) + [#25478](https://github.com/open-webui/open-webui/pull/25478) by @Classic298 (terminal proxy hang + interval leak)
+
+**Open PRs awaiting review:**
+- [`drizzle-team/drizzle-orm#5829`](https://github.com/drizzle-team/drizzle-orm/pull/5829) — PgNumericBigInt scale handling + regression tests
+- [`drizzle-team/drizzle-orm#5830`](https://github.com/drizzle-team/drizzle-orm/pull/5830) — singlestore session iterator cleanup
+- [`burnt-labs/xion.js#378`](https://github.com/burnt-labs/xion.js/pull/378) — abstraxion-core grant comparison
+- [`base/account-sdk#327`](https://github.com/base/account-sdk/pull/327) + [`#328`](https://github.com/base/account-sdk/pull/328) — spend-permission + sub-account error propagation
+- [`across-protocol/json-constants#5`](https://github.com/across-protocol/json-constants/pull/5), [`#6`](https://github.com/across-protocol/json-constants/pull/6), [`#7`](https://github.com/across-protocol/json-constants/pull/7) — duplicate key removal, npm provenance, network categorization
+- [`0xPolygon/lxly.js#65`](https://github.com/0xPolygon/lxly.js/pull/65) — optional option guard
+- [`nuxt/nuxt#35213`](https://github.com/nuxt/nuxt/pull/35213) — forwardedPrefetchEntries normalize
+
+**Active issue sprints:**
 - Polymarket SDK ecosystem (py-sdk, ts-sdk, clob-client-v2)
 - Across-protocol (toolkit, relayer, json-constants, sdk)
-- Cloudflare OSS (workers-sdk, agents, sandbox-sdk)
-- Plaid React Native SDK
-- Vercel Tier-1 OSS
+- Cloudflare OSS (workers-sdk, agents, sandbox-sdk) — 6 GHSAs in triage
 
 ---
 
