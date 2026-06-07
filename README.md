@@ -8,8 +8,8 @@ I'm a developer from Germany. By day I do quantitative research on prediction ma
 
 My path was not the standard "CS undergrad straight into a SWE job" one:
 
-- Three-year vocational training: Kaufmännischer Assistent zur Informationsverarbeitung
-- Fachhochschulreife
+- Three-year vocational programme in business IT (German qualification: *Kaufmännischer Assistent zur Informationsverarbeitung*)
+- Higher-education entrance qualification (German: *Fachhochschulreife*)
 - Started a Bachelor in Informatics out of curiosity, dropped out without finishing because I learned more building real systems than working through the curriculum
 
 I'm self-taught in everything that matters for what I do now. Reading unfamiliar codebases carefully is a big part of how I learn, and the contribution sprints on this profile are mostly that practice spilling outwards.
