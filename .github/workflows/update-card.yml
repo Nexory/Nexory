@@ -15,7 +15,7 @@ jobs:
 
       # SHA-pinned for supply-chain hygiene. Update via Dependabot or by
       # bumping the SHA to the new HEAD of Nexory/BugMergeStats main.
-      - uses: Nexory/BugMergeStats@7ffe59d54ee683ea34a113bb8f882a0051ca83a6
+      - uses: Nexory/BugMergeStats@973eb42db03b06e6fd520d763099a4f7248a1e61
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           username: Nexory
