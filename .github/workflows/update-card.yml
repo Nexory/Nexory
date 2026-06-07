@@ -15,7 +15,7 @@ jobs:
 
       # SHA-pinned for supply-chain hygiene. Update via Dependabot or by
       # bumping the SHA to the new HEAD of Nexory/gh-contrib-stats main.
-      - uses: Nexory/gh-contrib-stats@32bb61064224d1bbb514c9fe446b306e4ded0d1d
+      - uses: Nexory/gh-contrib-stats@360a1d2d65daac8832c4ea77321711bd035abf81
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           username: Nexory
