@@ -1,0 +1,22 @@
+name: Update contribution card
+
+on:
+  schedule:
+    - cron: "0 3 * * *"
+  workflow_dispatch:
+
+jobs:
+  update-card:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      # SHA-pinned for supply-chain hygiene. Update via Dependabot or by
+      # bumping the SHA to the new HEAD of Nexory/gh-contrib-stats main.
+      - uses: Nexory/gh-contrib-stats@32bb61064224d1bbb514c9fe446b306e4ded0d1d
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          username: Nexory
+          output_path: card.svg

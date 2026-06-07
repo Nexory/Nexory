@@ -1,5 +1,7 @@
 # Hi, I'm Nexory 👋
 
+![GitHub Contribution Stats](https://raw.githubusercontent.com/Nexory/Nexory/main/card.svg)
+
 ## Security Research · SDK Code-Correctness · Open Source Audit
 
 I focus on finding concrete, reproducible bugs in open-source SDKs and developer infrastructure. The work runs through an AI-orchestrated workflow — deep code reading, adversarial verification, and structured disclosure — gated by my approval at decision points. Methodology is detailed in the AI Disclosure section below.
