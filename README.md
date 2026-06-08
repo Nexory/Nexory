@@ -1,6 +1,6 @@
 # Hi, I'm Nexory 👋
 
-![GitHub Contribution Stats](https://raw.githubusercontent.com/Nexory/Nexory/main/card.svg)
+[![GitHub Contribution Stats](https://raw.githubusercontent.com/Nexory/Nexory/main/card.svg)](https://github.com/Nexory/BugMergeStats)
 
 I'm a developer from Germany. By day I do quantitative research on prediction markets (mostly Polymarket microstructure and orderbook stuff). On the side I read a lot of open-source code and file the bugs I find, which is what most of the activity on this profile is about.
 
