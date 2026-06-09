@@ -1,4 +1,4 @@
-# Hi, I'm Nexory 👋
+# Hi, I'm Andre 
 
 [![GitHub Contribution Stats](https://raw.githubusercontent.com/Nexory/Nexory/main/card.svg)](https://github.com/Nexory/BugMergeStats)
 
