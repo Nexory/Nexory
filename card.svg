@@ -3,7 +3,7 @@
      role="img" aria-labelledby="card-title card-desc">
 
   <title id="card-title">Nexory - GitHub Contribution Stats</title>
-  <desc id="card-desc">Contribution card for Nexory: 83 issues filed, 1 PRs merged, 46 repos contributed, 13 comment threads, 18 filed-and-fixed. Rank: S.</desc>
+  <desc id="card-desc">Contribution card for Nexory: 84 issues filed, 1 PRs merged, 46 repos contributed, 13 comment threads, 18 filed-and-fixed. Rank: S.</desc>
 
   <defs>
     <clipPath id="avatar-clip"><circle cx="190" cy="200" r="72"/></clipPath>
@@ -58,8 +58,8 @@
     <line x1="415" y1="165" x2="780" y2="165" stroke="#22c55e" stroke-width="1"/>
   </g>
   <text x="437" y="80" font-family="'Inter','Segoe UI',system-ui,sans-serif" font-size="12" font-weight="600" fill="#22c55e" letter-spacing="1.5" opacity="0.8">ISSUES FILED</text>
-  <text x="437" y="170" font-family="'Inter','Segoe UI',system-ui,sans-serif" font-size="72" font-weight="800" fill="#e2e8f0" letter-spacing="-3">83</text>
-  <text x="437" y="200" font-family="'Inter','Segoe UI',system-ui,sans-serif" font-size="13" fill="#64748b">42 open · 41 closed</text>
+  <text x="437" y="170" font-family="'Inter','Segoe UI',system-ui,sans-serif" font-size="72" font-weight="800" fill="#e2e8f0" letter-spacing="-3">84</text>
+  <text x="437" y="200" font-family="'Inter','Segoe UI',system-ui,sans-serif" font-size="13" fill="#64748b">41 open · 43 closed</text>
   <text x="437" y="268" font-family="'Inter','Segoe UI',system-ui,sans-serif" font-size="12" fill="#22c55e" opacity="0.7">top: tool-sdk · ts-sdk · py-sdk</text>
 
   <!-- TOP-RIGHT: PRs Merged (blue) -->
@@ -72,7 +72,7 @@
   </g>
   <text x="822" y="80" font-family="'Inter','Segoe UI',system-ui,sans-serif" font-size="12" font-weight="600" fill="#3b82f6" letter-spacing="1.5" opacity="0.8">PRS MERGED</text>
   <text x="822" y="170" font-family="'Inter','Segoe UI',system-ui,sans-serif" font-size="72" font-weight="800" fill="#e2e8f0" letter-spacing="-3">1</text>
-  <text x="822" y="200" font-family="'Inter','Segoe UI',system-ui,sans-serif" font-size="13" fill="#64748b">10 closed · 1 merged</text>
+  <text x="822" y="200" font-family="'Inter','Segoe UI',system-ui,sans-serif" font-size="13" fill="#64748b">12 closed · 1 merged</text>
   <text x="822" y="268" font-family="'Inter','Segoe UI',system-ui,sans-serif" font-size="12" fill="#3b82f6" opacity="0.7">top: kickbacks.ai · tool-sdk · wallet-adapters</text>
 
   <!-- BOTTOM-LEFT: Repos + Comment Threads (purple) -->
