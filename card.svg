@@ -59,7 +59,7 @@
   </g>
   <text x="437" y="80" font-family="'Inter','Segoe UI',system-ui,sans-serif" font-size="12" font-weight="600" fill="#22c55e" letter-spacing="1.5" opacity="0.8">ISSUES FILED</text>
   <text x="437" y="170" font-family="'Inter','Segoe UI',system-ui,sans-serif" font-size="72" font-weight="800" fill="#e2e8f0" letter-spacing="-3">84</text>
-  <text x="437" y="200" font-family="'Inter','Segoe UI',system-ui,sans-serif" font-size="13" fill="#64748b">40 open · 44 closed</text>
+  <text x="437" y="200" font-family="'Inter','Segoe UI',system-ui,sans-serif" font-size="13" fill="#64748b">39 open · 45 closed</text>
   <text x="437" y="268" font-family="'Inter','Segoe UI',system-ui,sans-serif" font-size="12" fill="#22c55e" opacity="0.7">top: tool-sdk · ts-sdk · py-sdk</text>
 
   <!-- TOP-RIGHT: PRs Merged (blue) -->
