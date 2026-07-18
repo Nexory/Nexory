@@ -27,10 +27,13 @@ A few categories I keep coming back to:
 
 ## A few recent ones that landed
 
-- [Polymarket/clob-order-utils#22](https://github.com/Polymarket/clob-order-utils/issues/22) -> [PR #23](https://github.com/Polymarket/clob-order-utils/pull/23): Insecure Math.random salt generation, switched to crypto.getRandomValues with 53-bit JSON-safe cap
-- [drizzle-team/drizzle-orm#5839](https://github.com/drizzle-team/drizzle-orm/issues/5839) -> [PR #5857](https://github.com/drizzle-team/drizzle-orm/pull/5857): mysql2 + singlestore iterator leaking event listeners, plus a regression test that pins the listener count
-- [vercel/turborepo#12975](https://github.com/vercel/turborepo/issues/12975) -> [PR #12976](https://github.com/vercel/turborepo/pull/12976): turborepo-auth using reqwest::Client::new() with no timeouts, fixed and shipped in a canary the same day
-- [open-webui/open-webui#25464](https://github.com/open-webui/open-webui/issues/25464) + [#25465](https://github.com/open-webui/open-webui/issues/25465) -> [PR #25478](https://github.com/open-webui/open-webui/pull/25478) + [#25479](https://github.com/open-webui/open-webui/pull/25479): terminal proxy hang + interval cleanup leak
+- [ProjectOpenSea/tool-sdk#9](https://github.com/ProjectOpenSea/tool-sdk/issues/9) -> [PR #10](https://github.com/ProjectOpenSea/tool-sdk/pull/10): a predicate auth-gate accepted an unbounded, non-expiring payment proof because `validBefore` was optional; reported with a matching fix and a failing-then-passing test, recreated by the maintainers and shipped in `@opensea/tool-sdk@0.16.1` with credit in the release notes
+- [ProjectOpenSea/opensea-js#1976](https://github.com/ProjectOpenSea/opensea-js/pull/1976): a `cancelOrders` batch spanning two Seaport protocol addresses silently left half the orders fillable; recreated by the maintainers and shipped in v11.2.0
+- [opencart/opencart#15540](https://github.com/opencart/opencart/pull/15540): switched API signature validation to constant-time `hash_equals()`, merged into master
+- [dojo/dojo#461](https://github.com/dojo/dojo/pull/461): guarded the final `setObject` path segment against prototype pollution, merged into master
+- [web2py/web2py#2650](https://github.com/web2py/web2py/pull/2650): timing-safe compare for the CSRF formkey check, merged into master
+- [vercel/ai#15708](https://github.com/vercel/ai/issues/15708) -> [PR #15734](https://github.com/vercel/ai/pull/15734): `safeValidateTypes` was discarding validated elements in array output, fixed by a maintainer-merged PR
+- [vercel/turborepo#12975](https://github.com/vercel/turborepo/issues/12975) -> [PR #12976](https://github.com/vercel/turborepo/pull/12976): the auth flow used a reqwest client with no timeouts and could hang the CLI, fixed and shipped in a same-day canary
 
 The full list lives in the issues and PRs tabs on this account.
 
