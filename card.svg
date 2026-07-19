@@ -73,7 +73,7 @@
   <text x="822" y="80" font-family="'Inter','Segoe UI',system-ui,sans-serif" font-size="12" font-weight="600" fill="#3b82f6" letter-spacing="1.5" opacity="0.8">PRS MERGED</text>
   <text x="822" y="170" font-family="'Inter','Segoe UI',system-ui,sans-serif" font-size="72" font-weight="800" fill="#e2e8f0" letter-spacing="-3">5</text>
   <text x="822" y="200" font-family="'Inter','Segoe UI',system-ui,sans-serif" font-size="13" fill="#64748b">18 closed · 5 merged</text>
-  <text x="822" y="268" font-family="'Inter','Segoe UI',system-ui,sans-serif" font-size="12" fill="#3b82f6" opacity="0.7">top: shiro · quartz · dojo</text>
+  <text x="822" y="268" font-family="'Inter','Segoe UI',system-ui,sans-serif" font-size="12" fill="#3b82f6" opacity="0.7">top: account-sdk · shiro · quartz</text>
 
   <!-- BOTTOM-LEFT: Repos + Comment Threads (purple) -->
   <rect x="415" y="310" width="365" height="250" rx="14" fill="#0d1f3c"/>
