@@ -59,7 +59,7 @@
   </g>
   <text x="437" y="80" font-family="'Inter','Segoe UI',system-ui,sans-serif" font-size="12" font-weight="600" fill="#22c55e" letter-spacing="1.5" opacity="0.8">ISSUES FILED</text>
   <text x="437" y="170" font-family="'Inter','Segoe UI',system-ui,sans-serif" font-size="72" font-weight="800" fill="#e2e8f0" letter-spacing="-3">86</text>
-  <text x="437" y="200" font-family="'Inter','Segoe UI',system-ui,sans-serif" font-size="13" fill="#64748b">34 open · 52 closed</text>
+  <text x="437" y="200" font-family="'Inter','Segoe UI',system-ui,sans-serif" font-size="13" fill="#64748b">33 open · 53 closed</text>
   <text x="437" y="268" font-family="'Inter','Segoe UI',system-ui,sans-serif" font-size="12" fill="#22c55e" opacity="0.7">top: shiro · tool-sdk · ts-sdk</text>
 
   <!-- TOP-RIGHT: PRs Merged (blue) -->
