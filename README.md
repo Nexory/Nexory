@@ -16,26 +16,23 @@ I'm self-taught in everything that matters for what I do now. Reading unfamiliar
 
 ## What I work on here
 
-The card above counts what's actually visible: issues filed in public repos and PRs maintainers wrote to fix them. I try to write each report well enough that the maintainer can ship the fix without follow-up questions.
+The card above counts what's actually visible: issues filed in public repos and PRs maintainers wrote to fix them. It undercounts on purpose, because a good part of the work never becomes a public artefact at all. Where a project asks for private reporting, the finding goes to that channel and stays there until they say otherwise.
 
-A few categories I keep coming back to:
+The areas I keep coming back to:
 
-- TypeScript / Python / Rust / Solidity SDK code-correctness: async race conditions, lifecycle bugs, decimal precision, type-binding drift between SDK declarations and runtime behaviour
-- OpenAPI generator artefacts (missing enum cases, schema validation gaps)
-- Auth callback routing failures and token-lifecycle issues
-- HackerOne reports and coordinated GHSA disclosure for security findings
+- **Memory safety in C parsers**: image and archive formats, where a length field is trusted one line before it is validated. Box parsing in AVIF, TIFF and PNG decoders, cpio and bzip2 headers, filesystem tooling.
+- **Java deserialization and XML**: JEP-290 filters on remember-me style cookies, XXE in transformers, class-resolution gaps in RPC layers.
+- **Crypto correctness**: certificate serial numbers that come out negative half the time, TLS contexts that verify nothing because a parameter defaulted, timing-unsafe comparisons on secrets, S/MIME structures re-encoded before they are checked.
+- **Prototype pollution and injection in web frameworks**: direct property writes that accept `__proto__`, path segments that skip a denylist the sibling function applies.
+- **PHP CMS and e-commerce**: signature validation, upload paths, permission checks.
 
-## A few recent ones that landed
+## How I file
 
-- [ProjectOpenSea/tool-sdk#9](https://github.com/ProjectOpenSea/tool-sdk/issues/9) -> [PR #10](https://github.com/ProjectOpenSea/tool-sdk/pull/10): a predicate auth-gate accepted an unbounded, non-expiring payment proof because `validBefore` was optional; reported with a matching fix and a failing-then-passing test, recreated by the maintainers and shipped in `@opensea/tool-sdk@0.16.1` with credit in the release notes
-- [ProjectOpenSea/opensea-js#1976](https://github.com/ProjectOpenSea/opensea-js/pull/1976): a `cancelOrders` batch spanning two Seaport protocol addresses silently left half the orders fillable; recreated by the maintainers and shipped in v11.2.0
-- [opencart/opencart#15540](https://github.com/opencart/opencart/pull/15540): switched API signature validation to constant-time `hash_equals()`, merged into master
-- [dojo/dojo#461](https://github.com/dojo/dojo/pull/461): guarded the final `setObject` path segment against prototype pollution, merged into master
-- [web2py/web2py#2650](https://github.com/web2py/web2py/pull/2650): timing-safe compare for the CSRF formkey check, merged into master
-- [vercel/ai#15708](https://github.com/vercel/ai/issues/15708) -> [PR #15734](https://github.com/vercel/ai/pull/15734): `safeValidateTypes` was discarding validated elements in array output, fixed by a maintainer-merged PR
-- [vercel/turborepo#12975](https://github.com/vercel/turborepo/issues/12975) -> [PR #12976](https://github.com/vercel/turborepo/pull/12976): the auth flow used a reqwest client with no timeouts and could hang the CLI, fixed and shipped in a same-day canary
+The rule I hold myself to is that nothing goes out that I have not reproduced first. In practice that means a test which fails without the fix **for the right reason**, passes with it, and both outputs written to disk rather than remembered. Then the full suite for regressions, and a run inside the project's own CI image where there is one, because "green on my machine" only proves my machine is tolerant.
 
-The full list lives in the issues and PRs tabs on this account.
+I also try to be honest about the parts I did not measure. If exploitability rests on an assumption I could not test, that sentence goes into the report as an assumption, not as a finding. A report that overstates its own reach costs the maintainer more time than it saves.
+
+Before anything is filed I check the project's own rules rather than my habits: where security reports are supposed to go, whether a CLA or DCO applies, whether the project even merges external contributions. Routing follows the written policy, not my read of the bug class.
 
 ## A note on AI
 
@@ -47,8 +44,7 @@ I sign every commit with my SSH key (`ED25519 SHA256:CWX60WPoOQcianliIELliGtEftF
 
 ## Reach out
 
-- HackerOne: [hackerone.com/nexory](https://hackerone.com/nexory)
-- Email for coordinated disclosure: visible on my GitHub profile sidebar
+For coordinated disclosure, or if you maintain something I've reported on: the email address in the sidebar of this profile.
 
 ## If you want to sponsor research time
 
